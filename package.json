@@ -1,0 +1,41 @@
+{
+  "name": "esprima.jsx",
+  "version": "0.1.0",
+  "description": "JSX wrapper for Esprima that is a high performance, standard-compliant ECMAScript parser.",
+  "scripts": {
+    "build": "grunt build",
+    "test": "grunt test",
+    "doc": "grunt doc"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "keywords": [
+    "jsx",
+    "lib"
+  ],
+  "main": "./lib/esprima.jsx",
+  "homepage": "https://github.org/shibukawa/esprima.jsx",
+  "bugs": {
+    "url": "https://github.org/shibukawa/esprima/issues"
+  },
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shibukawa/esprima.jsx.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+    "grunt-jsx": "~0.0.4"
+  },
+  "author": "shibukawa",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "esprima": "~1.0.4"
+  }
+}
