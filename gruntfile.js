@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       build: {
         src: ['<%= sampleDir %>/*.jsx'],
         add_search_path: ['<%= libDir %>'],
-        dest: '<%= sampleDir %>/',
+        dest: '<%= sampleDir %>/esprima.jsx-sample.jsx',
       },
 
       test: {

@@ -1,6 +1,6 @@
 {
   "name": "esprima.jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JSX wrapper for Esprima that is a high performance, standard-compliant ECMAScript parser.",
   "scripts": {
     "build": "grunt build",
@@ -15,9 +15,9 @@
     "lib"
   ],
   "main": "./lib/esprima.jsx",
-  "homepage": "https://github.org/shibukawa/esprima.jsx",
+  "homepage": "https://github.com/shibukawa/esprima.jsx",
   "bugs": {
-    "url": "https://github.org/shibukawa/esprima/issues"
+    "url": "https://github.com/shibukawa/esprima/issues"
   },
   "directories": {
     "doc": "./doc",

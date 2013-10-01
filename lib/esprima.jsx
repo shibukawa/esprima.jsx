@@ -65,6 +65,7 @@ native __fake__ class EsprimaToken
     var callee : EsprimaToken;
     var object : EsprimaToken;
     var property: EsprimaToken;
+    var properties : EsprimaToken[];
     var arguments : EsprimaToken[];
     var params : EsprimaToken[];
     var defaults : EsprimaToken[];
@@ -123,5 +124,6 @@ class EsprimaOption
 
 native class esprima {
     static function parse(src : string) : EsprimaProgramToken;
+    static function parse(src : string, option : Map.<boolean>) : EsprimaProgramToken;
     static function parse(src : string, option : EsprimaOption) : EsprimaProgramToken;
 } = "require('esprima')";
