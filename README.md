@@ -11,11 +11,13 @@ Code Example
 
 ```js
 import "esprima.jsx";
+import "console.jsx";
 
 class _Main {
     static function main(argv : string[]) : void
     {
-        // Write simple usage here!
+        var tokens = esprima.parse('var message = "Hello World!";');
+        console.log(tokens);
     }
 }
 ```
@@ -23,8 +25,7 @@ class _Main {
 Motivation
 ---------------
 
-Write a short description of the motivation behind the creation and maintenance of the project.
-This should explain why the project exists.
+You can create JS code modify/analyse code with awesome static type checking of JSX.
 
 Installation
 ---------------
@@ -39,7 +40,7 @@ $ npm install esprima --save
 Adds the following statement in your code:
 
 ```js
-import "node_modules/esprima.jsx/lib/esprima.jsx";
+import "./node_modules/esprima.jsx/lib/esprima.jsx";
 ```
 
 API Reference
