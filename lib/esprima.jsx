@@ -5,18 +5,31 @@
  * @see git@github.com:shibukawa/esprima.jsx.git
  */
 
-native __fake__ class EsprimaProgramToken
+native __fake__ class EsprimaBlockToken
 {
     var type : string;
     var body : EsprimaToken[];
+}
+
+native __fake__ class EsprimaProgramToken extends EsprimaBlockToken
+{
     var comments : EsprimaCommentToken[];
     var tokens : EsprimaSimpleToken[];
+}
+
+native __fake__ class EsprimaPropertyToken
+{
+    var type : string;
+    var kind : string;
+    var key : EsprimaSimpleToken;
+    var value : EsprimaToken;
 }
 
 native __fake__ class EsprimaSimpleToken
 {
     var type : string;
     var value : string;
+    var name : string;
 }
 
 native __fake__ class EsprimaCommentToken
@@ -39,35 +52,54 @@ native __fake__ class EsprimaLocation
     var column : int;
 }
 
+native __fake__ class EsprimaIdentifierToken
+{
+    var type : string;
+    var name : string;
+}
+
+native __fake__ class EsprimaExpressionToken
+{
+    var type : string;
+}
+
+native __fake__ class EsprimaOperatorToken extends EsprimaExpressionToken
+{
+    var left : EsprimaToken;
+    var right: EsprimaToken;
+    //var operator : string;
+}
+
+native __fake__ class EsprimaFunctionCallToken extends EsprimaExpressionToken
+{
+    var callee : EsprimaToken;
+    var arguments : EsprimaToken[];
+}
+
 native __fake__ class EsprimaToken
 {
     var type : string;
     var declarations: EsprimaToken[];
-    var body: EsprimaToken[];
+    var body: EsprimaBlockToken;
     var kind : string;
-    //var operator : string;
     var name : string;
     var computed : boolean;
     var each : boolean;
     var generator : boolean;
     var key : EsprimaToken;
     var value: EsprimaToken;
-    var left : EsprimaToken;
     var init : EsprimaToken;
     var test : EsprimaToken;
     var update : EsprimaToken;
-    var right: EsprimaToken;
-    var id : EsprimaToken;
+    var id : EsprimaIdentifierToken;
     var discriminant : EsprimaToken;
     var consequent : EsprimaToken;
     var alternate : EsprimaToken;
-    var expression : EsprimaToken;
-    var callee : EsprimaToken;
+    var expression : EsprimaExpressionToken;
     var object : EsprimaToken;
     var property: EsprimaToken;
-    var properties : EsprimaToken[];
-    var arguments : EsprimaToken[];
-    var params : EsprimaToken[];
+    var properties : EsprimaPropertyToken[];
+    var params : EsprimaIdentifierToken[];
     var defaults : EsprimaToken[];
     var cases : EsprimaToken[];
     var label : EsprimaToken;
